@@ -1,4 +1,21 @@
 # ChatGPT vs. Google Gemini: Assessing AI Frontiers for Patent Prior Art Search Using European Search Reports
+## Table of Contents
+1. [Abstract](#abstract)
+2. [Overview](#overview)
+    1. [Uncommon Examples in Examiner's Citations](#1-novelty-destruction-of-prior-art)
+    2. [Complete Prior Art Documents](#2-complete-prior-art-documents)
+    3. [Relevance of Novelty-Destroying Prior Art Paragraphs](#3-relevance-of-novelty-destroying-prior-art-paragraphs)
+3. [Search User Experience on ChatGPT and Gemini](#i-forgetfulness-of-tasks-mentioned-in-prompt-by-llms-over-time)
+    1. [Forgetfulness of Tasks Mentioned in Prompt by LLMs Over Time](#i-forgetfulness-of-tasks-mentioned-in-prompt-by-llms-over-time)
+    2. [Speed](#ii-speed)
+    3. [Patent Classification](#iii-patent-classification)
+4. [Task 1: Finding Similar Prior Art Paragraphs](#task-1-finding-similar-prior-art-paragraphs)
+    - [Prompt](#prompt)
+5. [Task 2: Predicting Relevant IPC Codes](#task-2-predicting-relevant-ipc-codes)
+    - [Prompt](#prompt-1)
+6. [Investigative Findings](#investigative-findings)
+
+
 ## Abstract
 Accurately identifying paragraphs in prior art
   documents that may compromise the novelty of
