@@ -28,7 +28,7 @@ Accurately identifying paragraphs in prior art
     examiners' cited paragraphs that may diminish the novelty of a given prior art. 
 ## Overview
 
-This repository contains discussions related to uncommon examples in European examinations and user experiences with ChatGPT and Gemini. Below, we provide detailed explanations on specific aspects of examiner's citations.
+This repository contains code, data, and also discussions related to uncommon examples in European examinations and user experiences with ChatGPT and Gemini. 
 
 ## Uncommon Examples in Examiner's Citations
 
