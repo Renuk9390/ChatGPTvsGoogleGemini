@@ -76,6 +76,24 @@ ChatGPT is quicker (average time of no more than 2 seconds per examination) in r
 Hallucination of Google Gemini in terms of predicting patent IPC codes for the application's EP4270403A1 independent claim, such as 'I01J4/02.' There is no such 'I' section; this is an example of pure hallucination.
 
 
+## Task 1: Finding Similar Prior Art Paragraphs
+
+### Prompt:
+
+Imagine you are a patent examiner or patent attorney. Your task is to find the closest matching prior art paragraphs to a given claim. The goal is to identify paragraphs that are contextually/semantically similar to the query (i.e. claim). Such that these similar paragraphs may possibly destroy the novelty of the claim.
+
+Each time I will provide you a query/claim and also JSON data which contains different paragraphs present in a list called "sentences". Each paragraph is identified by an 'id' and 'content'. Give me id of the top 3 most similar or most relevant paragraphs (i.e text within 'content') to the given claim/query. I don't want any other information in your response or result except the top 3 ids. Also as a result just give a response in a set of ids. Example such as (id1, id2, id3). In the output, show me only a set of 3 top ids, do not write any supportive sentences along. Do not use quotes in output. Use brackets like (), not like {}.
+
+---
+
+## Task 2: Predicting Relevant IPC Codes
+
+### Prompt:
+
+Based on your training data and knowledge, imagine you are a patent classifier. Please predict any top 5 most relevant IPC codes at the sub-group level for a given 'text'. For example, you can just give 'ipc1, ipc2..ipc5' as output, such that code ipc1 is most closest and ipc5 is fifth closest at sub-group level. Do not provide any explanation or text to me as output except top 5 IPC predictions at sub-group level.
+
+---
+
 ## Investigative Findings
 To assess AI frontiers' effectiveness (ChatGPT and Google Gemini), we created a test dataset for artificial examination called ClaimCiteRetrieval. We tested these tools for patent classification at various hierarchies and novelty passage retrieval. For comparison, we used state-of-the-art embedding methods. ChatGPT outperformed all other models in both classification and passage retrieval.
 Our finding also reveal that, retrieval accuracies are even lower than the probability of tossing a coin to select correct paragraphs. This fact is evident and supported by the results in Tables 2 and 3. Matching or distinguishing between cited and non-cited paragraphs within a given document remains a challenging task for Language Models (LLMs). It is clear that LLMs have a significant distance to cover in this regard, without fine-tuning them for retrieval tasks, reaching the mental ability of real examiners for the same task seems like a substantial hurdle.
