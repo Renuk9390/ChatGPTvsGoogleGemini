@@ -161,6 +161,7 @@ low scores in Top2 and Top3 accuracies of all-mpnet-base-v2 results caused overa
     APclaim-predParagraphs& 53.75&58.37 &58.49 \\
     \hline
   \end{tabular}
+  \end{table}
 
 In summary, we observed that not all the information in the novelty-destroying prior art paragraph is relevant when compared to the independent claim of the application. This is evident from the similarity scores obtained in our experiments. Additionally, we argue that European search opinions\footnote{\url{https://register.epo.org/application?documentId=LKXK8LB51JI2E1Q&number=EP22200335&lng=en&npl=false}} for applications demonstrate that examiners selectively match a few features or sentences while disregarding other parts of paragraphs and claims. This provides solid evidence that the one-to-one match of a claim and a prior art paragraph may not be an effective method for teaching novelty, as LLMs or other DL models apply knowledge selectively to compare novelty based on necessary and appropriate features.
 This analogy also helps explain why even state-of-the-art models \cite{vowinckel2023searchformer,chikkamath2020empirical,risch2020patentmatch} only slightly outperform random guessing with 52\% and 53\% accuracy in distinguishing between background art (A) and novelty-destroying paragraphs (X). The efficient development of methods to distinguish novelty-destroying paragraphs remains an open research question.
