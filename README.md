@@ -140,6 +140,28 @@ Based on your training data and knowledge, imagine you are a patent classifier. 
 To assess AI frontiers' effectiveness (ChatGPT and Google Gemini), we created a test dataset for artificial examination called ClaimCiteRetrieval. We tested these tools for patent classification at various hierarchies and novelty passage retrieval. For comparison, we used state-of-the-art embedding methods. ChatGPT outperformed all other models in both classification and passage retrieval.
 Our finding also reveal that, retrieval accuracies are even lower than the probability of tossing a coin to select correct paragraphs. This fact is evident and supported by the results in Tables 2 and 3. Matching or distinguishing between cited and non-cited paragraphs within a given document remains a challenging task for Language Models (LLMs). It is clear that LLMs have a significant distance to cover in this regard, without fine-tuning them for retrieval tasks, reaching the mental ability of real examiners for the same task seems like a substantial hurdle.
 
+The average similarity (in \%) of predicted paragarphs to 
+independent claim of each examination by models are shown in Table \ref{tab:sim-cited-avg}. It is clearly 
+observable from these score that PatentSBERTa and all-mpnet-base-v2
+have comprable understanding of predicted 3 most similar 
+pararaphs. However this is not the true in terms average retrieval accuracies, 
+the reason is larger variations in Top2 and Top3 accuracies of all-mpnet-base-v2 as shown in Table \ref{tab:retrieval}. 
+Although PatentSBERTa exhibits a relatively lower Top1 performance compared to all-mpnet-base-v2 at Top1, 
+low scores in Top2 and Top3 accuracies of all-mpnet-base-v2 results caused overall low retreival perfomance.
+
+\begin{table}[h]
+  \centering
+  \caption{Average Similarity (in \%) of Predicted Paragraphs to Independent Claim of Each Examination}
+  \label{tab:sim-cited-avg}
+  \begin{tabular}{lccc}
+    \hline
+    & all-MiniLM-L6-v2 & PatentSBERTa & all-mpnet-base-v2 \\
+    \hline
+    %\multirow{2}{*}{APclaim-predParagraphs} && & \\ % Add your data row here
+    APclaim-predParagraphs& 53.75&58.37 &58.49 \\
+    \hline
+  \end{tabular}
+
 In summary, we observed that not all the information in the novelty-destroying prior art paragraph is relevant when compared to the independent claim of the application. This is evident from the similarity scores obtained in our experiments. Additionally, we argue that European search opinions\footnote{\url{https://register.epo.org/application?documentId=LKXK8LB51JI2E1Q&number=EP22200335&lng=en&npl=false}} for applications demonstrate that examiners selectively match a few features or sentences while disregarding other parts of paragraphs and claims. This provides solid evidence that the one-to-one match of a claim and a prior art paragraph may not be an effective method for teaching novelty, as LLMs or other DL models apply knowledge selectively to compare novelty based on necessary and appropriate features.
 This analogy also helps explain why even state-of-the-art models \cite{vowinckel2023searchformer,chikkamath2020empirical,risch2020patentmatch} only slightly outperform random guessing with 52\% and 53\% accuracy in distinguishing between background art (A) and novelty-destroying paragraphs (X). The efficient development of methods to distinguish novelty-destroying paragraphs remains an open research question.
 
