@@ -46,6 +46,31 @@ Accurately identifying paragraphs in prior art
 ## Overview
 
 This repository contains code, data, and also discussions related to uncommon examples in European examinations and user experiences with ChatGPT and Gemini. 
+## Challenges in working with LLMs
+In the coarse-grained test realm, the challenge 
+arises from a lengthy list of paragraphs matching
+ between prior art and application claims. Two 
+ primary challenges for AI models include: 
+ \emph{i) Throughput} - determining how many paragraphs 
+ a model can process at a given time for novelty 
+ comparison, dependent on computation capabilities. 
+ To address this, we focus on a small set of 
+ selected paragraphs to 
+ manage computational complexity with free versioned AI tools. 
+ \emph{ii) Understanding quality} - assessing AI models' 
+ ability to comprehend technical details, complex 
+ vocabulary, legal jargon, and context-based text 
+ type distinctions. This paper emphasizes 
+ qualitative analysis by focusing on small 
+ sets of text pairs, prompting LLMs to determine 
+ novelty or destructive interactions. 
+ This method involves information retrieval at 
+ the passage level, seeking relevant paragraphs 
+ that can impact the novelty of a given 
+ application's independent claim (query). 
+ Additionally, model quality is evaluated based 
+ on classification capabilities.
+
 
 ## Uncommon Examples in Examiner's Citations
 
